@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ново-Садовая, 106Г — бронь столика</title>
-<meta name="description" content="Забронировать столик, программа лояльности, Telegram и адрес: Самара, Ново-Садовая, 106Г, 2 этаж.">
-<meta property="og:title" content="Забронировать столик — Ново-Садовая, 106Г">
+<title>Флэт 31 — поющий ресторан</title>
+<meta name="description" content="Забронировать стол, программа лояльности, Telegram-канал и адрес: Самара, Ново-Садовая, 106Г, 2 этаж.">
+<meta property="og:title" content="Флэт 31 — забронировать стол">
 <meta property="og:image" content="https://static.tildacdn.com/tild3265-3364-4766-b134-316463633963/01a16404-8313-78c2-9.png">
 <link rel="icon" href="https://static.tildacdn.com/tild6335-3938-4631-b665-646630303331/_31_.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=IBM+Plex+Mono:wght@400;500&family=Marck+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Unbounded:wght@400;500;600&display=swap">
 <style>
-/* Вариант 1 «Бордовый нуар»: узкая колонка-афиша, фото в замочной скважине, карточка-билет с адресом */
+/* «Бордовый нуар»: узкая колонка-афиша, фото растворяется в фоне, карточка-билет с адресом */
 :root{
   --ink:#120305;        /* фон, почти чёрный с бордовым */
   --wine:#4a0e16;       /* основной бордовый */
@@ -21,9 +21,8 @@
   --text:#e9dfd3;       /* текст на тёмном */
   --muted:#a8968a;      /* приглушённый текст */
   --line:rgba(243,236,226,.28);
-  --f-display:"Cormorant Garamond","Times New Roman",Georgia,serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
-  --f-hand:"Marck Script","Segoe Script",cursive;
+  --f-display:"Unbounded","Geologica",system-ui,sans-serif;
+  --f-text:"Geologica",system-ui,-apple-system,"Segoe UI",sans-serif;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -32,10 +31,10 @@ html{-webkit-text-size-adjust:100%}
 body{
   margin:0;min-height:100vh;
   background:var(--ink);color:var(--text);
-  font:400 13px/1.6 var(--f-mono);
+  font:400 14px/1.55 var(--f-text);
   padding-left:max(16px,env(safe-area-inset-left,0px));
   padding-right:max(16px,env(safe-area-inset-right,0px));
-  padding-block:max(20px,env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-bottom,0px));
+  padding-block:max(36px,env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-bottom,0px));
 }
 body::after{ /* плёночное зерно */
   content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;
@@ -57,24 +56,13 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
 }
 
 /* шапка */
-.top{
-  display:flex;justify-content:space-between;gap:12px;
-  font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-}
 .logo{display:flex;justify-content:center}
 .logo-svg{width:min(220px,62%);height:auto;display:block}
-.logo-svg .lm{fill:var(--cream)}
-.logo-svg .ls{fill:#d98a7c}
+.logo-svg .lm,.logo-svg .ls{fill:#fff}
 
 /* фото: кадр растворяется в фоне */
 .photo{position:relative;width:100%;aspect-ratio:4/5;max-width:100%;overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
-.photo::after{
-  content:"";position:absolute;inset:0;
-  background:
-    linear-gradient(180deg, var(--ink) 0%, transparent 14%, transparent 70%, var(--ink) 100%),
-    linear-gradient(90deg, var(--ink) 0%, transparent 12%, transparent 88%, var(--ink) 100%);
-}
 
 /* кнопки */
 .actions{display:flex;flex-direction:column;gap:12px}
@@ -88,12 +76,12 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
 .btn:active{transform:scale(.99)}
 .btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
 .btn .t{display:flex;flex-direction:column;gap:2px;min-width:0}
-.btn .t b{font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.btn .t span{font-size:12px;color:var(--muted)}
+.btn .t b{font:500 11px/1.35 var(--f-display);letter-spacing:.06em;text-transform:uppercase}
+.btn .t span{font:300 13px/1.4 var(--f-text);color:var(--muted)}
 .btn .arr{font-size:14px;transition:transform .25s ease}
 .btn:hover .arr{transform:translateX(4px)}
 .btn.primary{background:var(--cream);color:var(--wine);border-color:var(--cream);min-height:68px}
-.btn.primary .t span{color:var(--wine-2);font-size:15px;letter-spacing:.02em}
+.btn.primary .t span{color:var(--wine-2);font:500 17px/1.3 var(--f-text);letter-spacing:.01em}
 .btn.primary:hover{background:#fff8ee}
 
 /* карточка-билет */
@@ -119,18 +107,14 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
   content:"";position:absolute;inset:8px;border:1px solid rgba(74,14,22,.25);pointer-events:none;
   border-radius:14px;
 }
-.ticket .label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--wine-2)}
-.ticket h2{margin:0;font:400 30px/1.05 var(--f-display);color:var(--wine);text-wrap:balance}
-.ticket p{margin:0;font-size:12px;color:#5a3a3e}
-.ticket .hand{color:var(--wine-2);font-size:22px;margin:2px 0 0}
+.ticket .label{font:500 10px/1.4 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--wine-2)}
+.ticket h2{margin:0;font:500 clamp(17px,5vw,21px)/1.3 var(--f-display);color:var(--wine);text-wrap:balance}
+.ticket p{margin:0;font:400 13px/1.4 var(--f-text);color:#5a3a3e}
 .ticket a.route{
-  margin-top:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);
+  margin-top:6px;font:500 10px/1.4 var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--wine);
   border-bottom:1px solid currentColor;padding-bottom:2px;
 }
 
-.foot{
-  text-align:center;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
-}
 
 /* появление */
 .page > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
@@ -143,14 +127,36 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
 @keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.page > *{animation:none}}
 
-@media (min-width:700px){
+/* планшет: та же колонка, чуть свободнее */
+@media (min-width:600px){
   body{padding-block:56px}
+  .page{gap:32px}
+}
+
+/* десктоп: фото слева во всю высоту экрана, информация справа */
+@media (min-width:960px){
+  body{padding-block:0;padding-left:0;padding-right:0}
   .page{
-    padding:40px 36px 36px;
-    background:linear-gradient(180deg,rgba(18,3,5,.92),rgba(74,14,22,.92));
-    outline:1px solid rgba(243,236,226,.08);
-    box-shadow:0 40px 120px rgba(0,0,0,.6);
+    max-width:1280px;min-height:100vh;
+    display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+    grid-template-areas:"photo ." "photo logo" "photo actions" "photo ticket" "photo .";
+    grid-template-rows:1fr auto auto auto 1fr;
+    align-content:center;column-gap:clamp(48px,6vw,96px);row-gap:36px;
+    padding:56px clamp(32px,5vw,72px);
   }
+  .logo{grid-area:logo;justify-content:flex-start}
+  .logo-svg{width:260px}
+  .actions{grid-area:actions;max-width:460px}
+  .ticket{grid-area:ticket;align-self:start;max-width:460px;align-items:flex-start;text-align:left;padding:30px 34px 28px}
+  .ticket h2{font-size:22px}
+  .photo{
+    grid-area:photo;align-self:stretch;
+    aspect-ratio:auto;height:min(calc(100vh - 112px),820px);min-height:560px;
+  }
+  .photo img{object-position:50% 30%}
+  .btn{min-height:64px;padding:14px 22px}
+  .btn.primary{min-height:76px}
+  .btn .t b{font-size:12px}
 }
 </style>
 </head>
@@ -159,8 +165,6 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
 
 
 <main class="page">
-  <div class="top"><span>Самара</span><span>2 этаж</span></div>
-
   <div class="logo">
     <svg class="logo-svg" viewBox="244 473 767 328" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип">
 <path d="M974.418 779.896V753.062H981.287V763.179H993.657V753.062H1000.53V779.896H993.657V768.76H981.287V779.896H974.418Z" class="ls"/>
@@ -195,7 +199,7 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
   <nav class="actions" id="actions">
     <a class="btn primary" href="tel:+79022975977">
       <svg viewBox="0 0 24 24"><path d="M5 4h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 15.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
-      <span class="t"><b>Забронировать столик</b><span>+7 (902) 297-59-77</span></span>
+      <span class="t"><b>Забронировать стол</b><span>+7 (902) 297-59-77</span></span>
       <span class="arr">→</span>
     </a>
     <a class="btn" href="https://apps.apple.com/ru/app/ulandy-family/id6768882456" target="_blank" rel="noopener">
@@ -205,7 +209,7 @@ a:focus-visible{outline:1px solid var(--cream);outline-offset:4px}
     </a>
     <a class="btn" href="https://t.me/stereocafe_flat31" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M21 4L3 11.2l6.3 2.2L19 7l-7.6 8.2.4 4.8 3-3.4 4.2 3.2z"/></svg>
-      <span class="t"><b>Telegram</b><span>@stereocafe_flat31</span></span>
+      <span class="t"><b>Telegram-канал</b><span>@stereocafe_flat31</span></span>
       <span class="arr">→</span>
     </a>
     <a class="btn" id="site-btn" href="#" target="_blank" rel="noopener" hidden>
